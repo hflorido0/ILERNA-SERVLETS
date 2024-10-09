@@ -36,7 +36,7 @@ public class PlatosService {
             platosServlet.getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
 
         } catch (Exception e) {
-
+            e.printStackTrace();
             req.setAttribute("error", e.getMessage());
             platosServlet.getServletContext().getRequestDispatcher("/jsp/error.jsp").forward(req, resp);
         }
