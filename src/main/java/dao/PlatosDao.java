@@ -29,4 +29,8 @@ public class PlatosDao extends DaoConnexion {
 
 
     }
+
+    public void insertPlato(int id_usuario, Plato plato) {
+        //TODO: insert into plato (......, id_usuario_creador) values (....., id_usuario);
+    }
 }

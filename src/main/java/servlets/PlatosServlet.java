@@ -25,6 +25,6 @@ public class PlatosServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        platosService.postPlatos(req);
+        platosService.postPlatos(req, resp, this);
     }
 }

@@ -6,6 +6,7 @@ import servlets.LoginServlet;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class LoginService {
     private LoginDao loginDao;
@@ -29,6 +30,8 @@ public class LoginService {
                         .forward(req, resp);
             } else {
                 req.setAttribute("usuario", usuario);
+                HttpSession session = req.getSession();
+                session.setAttribute("user", usuario);
                 loginServlet.getServletContext().getRequestDispatcher("/jsp/actividades.jsp")
                         .forward(req, resp);
             }
